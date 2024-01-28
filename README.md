@@ -12,7 +12,7 @@ npm install uniti-price-tool
 ```
 ## Usage
 To use uniti-price-tool, require it in your Node.js application:
-```bash
+```javascript
 const unitiCalculator = require('uniti-price-tool')
 ```
 Then, you can use the `unitiCalculator` function to perform unit conversions and price calculations. The function takes the following parameters:
@@ -30,21 +30,21 @@ The function returns an object containing the total price and quantity of conver
 ## Example
 Here's an example of how to use `unitiCalculator` to convert distances:
 
-```bash
+```javascript
 const unitiPriceTool = require('uniti-price-tool');
 
 const result = unitiPriceTool("Distance", "m", 1.5, "ft", 10, 2);
 
-#The m represent meter it's the primary unit
-#The 1.5 the price of 1 metr is 1.5
-#The ft represent foot the converted to unit
-#The 10 is how many foot mean the qty of the converted to unit
+//The m represent meter it's the primary unit
+//The 1.5 the price of 1 metr is 1.5
+//The ft represent foot the converted to unit
+//The 10 is how many foot mean the qty of the converted to unit
 
 console.log(result);
 ```
 This will output:
 
-```bash
+```json
 {
   "totalPrice": 4.92,
   "qty": 32.81,
