@@ -10,10 +10,10 @@ You can install `uniti-price-tool` via npm:
 ```bash
 npm install uniti-price-tool
 ```
-## Usage
+## Usage Of unitiCalculator 
 To use uniti-price-tool, require it in your Node.js application:
 ```javascript
-const unitiCalculator = require('uniti-price-tool')
+const { unitiCalculator } = require('uniti-price-tool')
 ```
 Then, you can use the `unitiCalculator` function to perform unit conversions and price calculations. The function takes the following parameters:
 
@@ -54,6 +54,49 @@ This will output:
   "resultDescription": "Given that the cost of one meter is 1.5, the total price for 10 foot amounts to 4.92."
 }
 ```
+
+## Usage Of unitiCalculator 
+To use uniti-price-tool, require it in your Node.js application:
+```javascript
+const { allUnitsBasedOnCategory } = require('uniti-price-tool')
+```
+Then, you can use the `allUnitsBasedOnCategory` function to retrieve all unit symbols and their names based on the provided category. The function takes the following parameters:
+
+* `category`: The category of units (e.g., "Distance", "Area", "Mass", "Volume").
+
+The function returns an array of objects, each containing information about a unit within the specified category. Each object in the array includes two properties:
+* `unit`: The symbol of the unit.
+* `name`: The name of the unit.
+
+## Example
+Here's an example of how to use `allUnitsBasedOnCategory` to retrieve all units symbols and their names based on the provided category:
+
+```javascript
+const { allUnitsBasedOnCategory } = require('uniti-price-tool')
+
+const result = allUnitsBasedOnCategory("Distance")
+
+//The Distance represent the units category
+
+console.log(result);
+```
+This will output:
+
+```javascript
+ [
+    { unit: 'mg', name: 'milligram' },
+    { unit: 'g', name: 'gram' },
+    { unit: 'kg', name: 'kilogram' },
+    { unit: 't', name: 'metric ton' },
+    { unit: 'lb', name: 'pound' },
+    { unit: 'oz', name: 'ounce' },
+    { unit: 'gr', name: 'grain' },
+    { unit: 'ton_us', name: 'US ton' },
+    { unit: 'ton_uk', name: 'UK ton' },
+    { unit: 'ct', name: 'carat' }
+ ]
+```
+
 ## Unit Categories and Their Units with Names
 
 | Category | Unit | Name                   | Category | Unit | Name                   |
@@ -110,8 +153,17 @@ This will output:
 
 7. **"The primary unit or the convert to unit does not belong to the Volume category"**  
    This error occurs when either the `primaryUnit` or the `toUnit` parameter provided to `unitiCalculator` does not belong to the Volume category.
+   
+8. **"Wrong unit type types examples: (Distance, Area, Mass, Volume) pick one!"**  
+   This error occurs when the `unitsCategory` parameter value provided to `unitiCalculator` does not match any category name.
+   
+##
+`allUnitsBasedOnCategory` returns strings with error message if input validation fails. These error messages help you identify and resolve issues with your input parameters. Here are the possible error messages and their explanations:
 
-Make sure to handle these error messages appropriately in your code to ensure smooth execution and accurate results from `unitiCalculator`.
+* **"Wrong units Category types examples: (Distance, Area, Mass, Volume) pick one!"**  
+   This error occurs when the `category` parameter value provided to `allUnitsBasedOnCategory` does not match any category name.
+
+Make sure to handle these error messages appropriately in your code to ensure smooth execution and accurate results from `unitiCalculator` or `allUnitsBasedOnCategory`.
 
 ## Contribution
 Contributions are welcome! Feel free to submit issues or pull requests.
