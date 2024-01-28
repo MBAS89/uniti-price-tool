@@ -168,7 +168,7 @@ const unitiCalculator = ( unitsCategory, primaryUnit, pricePerprimaryUnit, toUni
                     value: 1e6,
                     name: "metric ton"
                 },
-                pound: {
+                lb: {
                     value: 453.59237,
                     name: "pound"
                 },
@@ -328,4 +328,203 @@ const unitiCalculator = ( unitsCategory, primaryUnit, pricePerprimaryUnit, toUni
     }
 }
 
-module.exports = unitiCalculator
+const allUnitsBasedOnCategory = (category) => {
+    switch (category) {
+        case "Distance":
+            const distanceUnits = [
+                {
+                    unit: "mm", 
+                    name: "millimeter"
+                }, 
+                {
+                    unit: "cm",
+                    name: "centimeter"
+                },
+                {
+                    unit: "dm",
+                    name: "decimeter"
+                },
+                {
+                    unit: "m", 
+                    name: "meter"
+                },
+                {
+                    unit: "km", 
+                    name: "kilometer"
+                },
+                {
+                    unit: "ft", 
+                    name: "foot"
+                },
+                {
+                    unit: "yd", 
+                    name: "yard"
+                },
+                {
+                    unit: "mi", 
+                    name: "mile"
+                },
+                {
+                    unit: "nmi", 
+                    name: "nautical mile"
+                }
+            ] 
+
+            return distanceUnits
+        case "Area":
+            const areaUnits = [
+                {
+                    unit: "mm2",
+                    name: "square millimeter"
+                },
+                {
+                    unit: "cm2",
+                    name: "square centimeter"
+                },
+                {
+                    unit: "m2",
+                    name: "square meter"
+                },
+                {
+                    unit: "a",
+                    name: "are"
+                },
+                {
+                    unit: "ha",
+                    name: "hectare"
+                },
+                {
+                    unit: "km2",
+                    name: "square kilometer"
+                },
+                {
+                    unit: "ft2",
+                    name: "square foot"
+                },
+                {
+                    unit: "yd2",
+                    name: "square yard"
+                }
+            ] 
+
+            return areaUnits
+        case "Mass":
+            const massUnits = [
+                {
+                    unit: "mg",
+                    name: "milligram"
+                },
+                {
+                    unit: "g",
+                    name: "gram"
+                },
+                {
+                    unit: "kg",
+                    name: "kilogram"
+                },
+                {
+                    unit: "t",
+                    name: "metric ton"
+                },
+                {
+                    unit: "lb",
+                    name: "pound"
+                },
+                {
+                    unit: "oz",
+                    name: "ounce"
+                },
+                {
+                    unit: "gr",
+                    name: "grain"
+                },
+                {
+                    unit: "ton_us",
+                    name: "US ton"
+                },
+                {
+                    unit: "ton_uk",
+                    name: "UK ton"
+                },
+                {
+                    unit: "ct",
+                    name: "carat"
+                }
+            ] 
+
+            return massUnits
+        case "Volume":
+            const volumeUnits = [
+                {
+                    unit: "ml",
+                    name: "milliliter"
+                },
+                {
+                    unit: "cm3",
+                    name: "cubic centimeter"
+                },
+                {
+                    unit: "l",
+                    name: "liter"
+                },
+                {
+                    unit: "m3",
+                    name: "cubic meter"
+                },
+                {
+                    unit: "in3",
+                    name: "cubic inch"
+                },
+                {
+                    unit: "ft3",
+                    name: "cubic foot"
+                },
+                {
+                    unit: "yd3",
+                    name: "cubic yard"
+                },
+                {
+                    unit: "gal_us",
+                    name: "US gallon"
+                },
+                {
+                    unit: "gal_dry_us",
+                    name: "US dry gallon"
+                },
+                {
+                    unit: "gal_uk",
+                    name: "UK gallon"
+                },
+                {
+                    unit: "oz_us",
+                    name: "US fluid ounce"
+                },
+                {
+                    unit: "oz_uk",
+                    name: "UK fluid ounce"
+                },
+                {
+                    unit: "qt_us",
+                    name: "US quart"
+                },
+                {
+                    unit: "qt_uk",
+                    name: "UK quart"
+                },
+                {
+                    unit: "pt_us",
+                    name: "US pint"
+                },
+                {
+                    unit: "pt_uk",
+                    name: "UK pint"
+                }
+            ] 
+
+            return volumeUnits
+        default:
+            return "wrong units Category types examples: (Distance, Area, Mass, Volume) pick one!"
+    }
+}
+
+module.exports = { unitiCalculator, allUnitsBasedOnCategory }
