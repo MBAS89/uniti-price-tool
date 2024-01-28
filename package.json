@@ -1,0 +1,31 @@
+{
+  "name": "uniti-price-tool",
+  "version": "1.0.0",
+  "description": "uniti tool is a versatile npm package designed to calculate total prices based on different units and quantities. With this package, you can easily convert prices between various units, enabling seamless integration into your applications for efficient cost calculation and unit conversion.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MBAS89/uniti-price-tool.git"
+  },
+  "keywords": [
+    "Unit conversion",
+    "Price calculation",
+    "Quantity calculation",
+    "Unit mapping",
+    "Price conversion",
+    "Unit pricing",
+    "Cost calculation",
+    "Quantity conversion",
+    "Unit conversion tool",
+    "Price calculator"
+  ],
+  "author": "Mohammed Abu Siam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MBAS89/uniti-price-tool/issues"
+  },
+  "homepage": "https://github.com/MBAS89/uniti-price-tool#readme"
+}
