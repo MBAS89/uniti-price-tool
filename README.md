@@ -74,7 +74,7 @@ Here's an example of how to use `allUnitsBasedOnCategory` to retrieve all units 
 ```javascript
 const { allUnitsBasedOnCategory } = require('uniti-price-tool')
 
-const result = allUnitsBasedOnCategory("Distance")
+const result = allUnitsBasedOnCategory("Mass")
 
 //The Distance represent the units category
 
