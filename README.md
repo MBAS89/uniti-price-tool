@@ -76,7 +76,7 @@ const { allUnitsBasedOnCategory } = require('uniti-price-tool')
 
 const result = allUnitsBasedOnCategory("Mass")
 
-//The Distance represent the units category
+//The Mass represent the units category
 
 console.log(result);
 ```
