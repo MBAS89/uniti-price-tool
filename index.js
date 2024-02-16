@@ -522,8 +522,45 @@ const allUnitsBasedOnCategory = (category) => {
             ] 
 
             return volumeUnits
+        case "Others":
+            const otherUnits = [
+                {
+                    unit: "pcs",
+                    name: "peice"
+                },
+                {
+                    unit: "pk",
+                    name: "pack"
+                },
+                {
+                    unit: "set",
+                    name: "set"
+                },
+                {
+                    unit: "box",
+                    name: "box"
+                },
+                {
+                    unit: "carton",
+                    name: "carton"
+                },
+                {
+                    unit: "cart",
+                    name: "cart"
+                },
+                {
+                    unit: "bag",
+                    name: "Bag"
+                },
+                {
+                    unit: "pieces",
+                    name: "pieces"
+                }
+            ] 
+
+            return otherUnits
         default:
-            return "wrong units Category types examples: (Distance, Area, Mass, Volume) pick one!"
+            return "wrong units Category types examples: (Distance, Area, Mass, Volume, Others) pick one!"
     }
 }
 
