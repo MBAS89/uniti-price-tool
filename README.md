@@ -118,15 +118,18 @@ This will output:
 |          | pound| pound                  |          | in3  | cubic inch             |
 |          | oz   | ounce                  |          | ft3  | cubic foot             |
 |          | gr   | grain                  |          | yd3  | cubic yard             |
-|          | ton_us| US ton                |          | gal_us| US gallon              |
+|          | ton_us| US ton                |          | gal_us| US gallon             |
 |          | ton_uk| UK ton                |          | gal_dry_us| US dry gallon     |
-|          | ct   | carat                  |          | gal_uk| UK gallon              |
-|          |      |                        |          | oz_us| US fluid ounce         |
-|          |      |                        |          | oz_uk| UK fluid ounce         |
-|          |      |                        |          | qt_us| US quart               |
-|          |      |                        |          | qt_uk| UK quart               |
-|          |      |                        |          | pt_us| US pint                |
-|          |      |                        |          | pt_uk| UK pint                |
+|          | ct   | carat                  |          | gal_uk| UK gallon             |
+|----------|------|------------------------|          | oz_us| US fluid ounce         |
+|  Others  |  pcs | peice                  |          | oz_uk| UK fluid ounce         |
+|          |  pkg | pack                   |          | qt_us| US quart               |
+|          |  set | set                    |          | qt_uk| UK quart               |
+|          |  box | box                    |          | pt_us| US pint                |
+|          |  carton| carton               |                                          |
+|          |  cart| cart                   |                                          |
+|          |  bag| bag                     |                                          |
+|          |  pieces| pieces               |                                          |
 
 
 ## Error Handling
@@ -160,7 +163,7 @@ This will output:
 ##
 `allUnitsBasedOnCategory` returns strings with error message if input validation fails. These error messages help you identify and resolve issues with your input parameters. Here are the possible error messages and their explanations:
 
-* **"Wrong units Category types examples: (Distance, Area, Mass, Volume) pick one!"**  
+* **"Wrong units Category types examples: (Distance, Area, Mass, Volume, Others) pick one!"**  
    This error occurs when the `category` parameter value provided to `allUnitsBasedOnCategory` does not match any category name.
 
 Make sure to handle these error messages appropriately in your code to ensure smooth execution and accurate results from `unitiCalculator` or `allUnitsBasedOnCategory`.
